@@ -1,0 +1,134 @@
+* {
+    background-color: #dcdbd6;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 2px 2px 6px rgb(62, 133, 219);
+}
+
+nav {
+    align-items: center;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    background-color: #dcc361;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+nav ul li:hover {
+    box-shadow: 5px 5px 5px rgb(143, 56, 225);
+}
+
+.container{
+    text-align: center;
+}
+
+.female .head {
+    background-color: #dbafa0;
+    text-align: left;
+    padding: 3px;
+    margin-top: 60px;
+}
+
+.male .head {
+    background-color: #9fb2b8;
+    text-align: left;
+    padding: 3px;
+    margin-top: 60px;
+}
+
+.img {
+    margin: auto;
+}
+
+p {
+    padding: 10px;
+    text-align: left;
+}
+
+.container>div>div {
+    width: 100%;
+    height: 425px;
+    border: solid 1px purple;
+    padding-bottom: 60px;
+}
+
+footer,a {
+    background-color: #dcc361;
+    color: white;
+    padding: 3px 12px;
+}
+
+
+
+/* Tablets */
+@media screen and (min-width: 600px) {
+    /* female grid */
+    .head { grid-area: head;}
+    .katmai { grid-area: katmai; }
+    .kunik { grid-area: kunik; }
+    .tazlina { grid-area: taz; }
+    .quatse { grid-area: quatse; }
+
+    .female {
+        display: grid;
+        grid-template-areas:
+            'head head' 
+            'katmai kunik'
+            'taz quatse';
+        grid-template-columns: 50% 50%;
+    }
+
+    /* male grid */
+    .head { grid-area: head; }
+    .mak { grid-area: mak; }
+    .rialto { grid-area: rialto; }
+    .hardy { grid-area: hardy; }
+    .joey { grid-area: joey; }
+
+    .male {
+        display: grid;
+        grid-template-areas: 
+            'head head'
+            'mak rialto'
+            'hardy joey';
+        grid-template-columns: 50% 50%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        width: 70px;
+    }
+}
+
+
+/* Desktop */
+@media screen and (min-width: 900px) {
+    .female {
+        grid-template-areas: 
+            'head head head head'
+            'katmai kunik taz quatse';
+        grid-template-columns: auto;
+    }
+
+    .male {
+        grid-template-areas: 
+            'head head head head'
+            'mak rialto hardy joey';
+        grid-template-columns: auto;
+    }
+}
